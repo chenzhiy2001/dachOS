@@ -5,3 +5,5 @@
 暂定在Github上开发，自动同步至Gitee。
 
 同时，本项目借鉴了[rCore-tutorial-detail](https://gitee.com/rCore-Tutorial-detail/r-core-tutorial-detail)的内容，感谢他们的精彩文档！
+
+[开发wiki](doc/wiki/Home.md)
