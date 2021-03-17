@@ -1,3 +1,6 @@
+# 填文件的时候看清楚选哪个学院
+
+
 [wiki编辑流程](wiki编辑流程.md) 利用github actions, 本仓库会自动同步到[gitee](https://gitee.com/chenzhiy2001/dachOS)上。
 
 [3月11日](3月11日.md)
