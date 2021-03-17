@@ -1,5 +1,5 @@
 # 填文件的时候看清楚选哪个学院
-
+我在思考一个方法，用这个方法处理一下文件，就能整理出我们需要的内容。网络上挺多相关的知识，有空我去搜索整理下。
 
 [wiki编辑流程](wiki编辑流程.md) 利用github actions, 本仓库会自动同步到[gitee](https://gitee.com/chenzhiy2001/dachOS)上。
 
