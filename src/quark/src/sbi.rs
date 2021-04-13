@@ -5,6 +5,8 @@ const SYSCALL_EXIT: usize = 93;
 const SYSCALL_WRITE: usize = 64;
 const SBI_CONSOLE_PUTCHAR: usize = 1;
 
+const SBI_SET_TIMER: usize = 0;
+
 #[inline(always)]
 pub fn sbi_call(which:usize, arg0: usize, arg1: usize, arg2:usize) -> usize {
     let mut ret;
@@ -27,6 +29,10 @@ pub fn console_putchar(c:usize){
 pub fn shutdown( ) -> ! {
     sbi_call(SBI_SHUTDOWN,0,0,0);
     panic!("It should shutdown!");
+}
+
+pub fn set_timer(time: usize){
+    sbi_call(SBI_SET_TIMER, time, 0,0);
 }
 
 //syscall是linux系统调用，不再使用

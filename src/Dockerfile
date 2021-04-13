@@ -25,7 +25,7 @@ RUN set -x; \
     && ./configure --target-list=riscv64-softmmu,riscv64-linux-user \
     && make -j$(nproc) install \
     && cd $HOME && rm -rf qemu-5.0.0 qemu-5.0.0.tar.xz
-
+    
 #for chinese network
 # RUN set -x; \
 #     APT_CONF='/etc/apt/sources.list'; \

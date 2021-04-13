@@ -1,5 +1,4 @@
 // TODO make this as an application
-#[allow(dead_code)]
 pub fn roar(){
 let _roar ="
 

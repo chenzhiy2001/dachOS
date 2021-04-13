@@ -1,1 +1,0 @@
-/Users/chenzhiyang/projects/github/dachOS/src/quark/target/riscv64gc-unknown-none-elf/debug/quark: /Users/chenzhiyang/projects/github/dachOS/src/quark/src/entry.asm /Users/chenzhiyang/projects/github/dachOS/src/quark/src/lang_items.rs /Users/chenzhiyang/projects/github/dachOS/src/quark/src/main.rs /Users/chenzhiyang/projects/github/dachOS/src/quark/src/sbi.rs

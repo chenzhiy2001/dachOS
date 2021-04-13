@@ -7,3 +7,5 @@ build:
 	@cargo build --release
 	@rust-objcopy --binary-architecture=riscv64 target/riscv64gc-unknown-none-elf/release/quark --strip-all -O binary target/riscv64gc-unknown-none-elf/release/quark.bin
 
+solve-filelock:
+	@rm ~/.cargo/.package-cache

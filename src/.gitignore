@@ -1,6 +1,6 @@
 .idea/*
-os/target/*
-os/.idea/*
-os/src/link_app.S
-os/Cargo.lock
+quark/target/*
+quark/.idea/*
+quark/src/link_app.S
+quark/Cargo.lock
 tools/
