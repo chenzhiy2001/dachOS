@@ -1,6 +1,0 @@
-.idea/*
-quark/target/*
-quark/.idea/*
-quark/src/link_app.S
-quark/Cargo.lock
-tools/

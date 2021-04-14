@@ -1,11 +1,20 @@
 [package]
 name = "quark"
 version = "0.1.0"
-authors = ["chenzhiy2001 <30455060+chenzhiy2001@users.noreply.github.com>"]
-edition = "2018"
+authors = ["chenzhiy2001 <chenzhiy2001@qq.com>"]# Hats off to rCore
+edition = "2018" # 这个2018是rust的版本（2015 2018等）不要乱改
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 lazy_static = {version="1.4.0",features=["spin_no_std"]}
 riscv = {git = "https://github.com/rcore-os/riscv", features = ["inline-asm"] }
+algorithm = { path = 'src/algorithm' }
+buddy_system_allocator = "0.7.0"
+spin = "0.9.0"
+
+# panic 时直接终止，因为我们没有实现堆栈展开的功能
+[profile.dev]
+panic = "abort"
+[profile.release]
+panic = "abort"
