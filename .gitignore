@@ -4,3 +4,4 @@ src/quark/.idea/*
 src/quark/src/link_app.S
 src/quark/Cargo.lock
 src/tools/
+*/.DS_Store
