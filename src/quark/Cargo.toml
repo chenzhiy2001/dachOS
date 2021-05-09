@@ -12,6 +12,8 @@ riscv = {git = "https://github.com/rcore-os/riscv", features = ["inline-asm"] }
 algorithm = { path = 'src/algorithm' }
 buddy_system_allocator = "0.7.0"
 spin = "0.9.0"
+bit_field = "0.10.0"
+bitflags = "1.2.1"
 
 # panic 时直接终止，因为我们没有实现堆栈展开的功能
 [profile.dev]

@@ -4,6 +4,7 @@
 #![feature(global_asm)]
 #![feature(panic_info_message)]
 #![feature(alloc_error_handler)]
+#![feature(slice_fill)]
 
 #[macro_use]
 mod console;
@@ -11,6 +12,7 @@ mod lang_items;
 mod sbi;
 mod interrupt;
 mod memory;
+mod roar;
 
 extern crate alloc;
 /* 
@@ -48,27 +50,17 @@ pub fn rust_main()->(){
     interrupt::init();
     memory::init();
 
-    use alloc::boxed::Box;
-    use alloc::vec::Vec;
-    let v = Box::new(5);
-    assert_eq!(*v,5);
-    core::mem::drop(v);
+    let remap = memory::mapping::MemorySet::new_kernel().unwrap();
+    remap.activate();
+    println!("kernel remapped");
 
-    let mut vec = Vec::new();
-    for i in 0..10000{
-        vec.push(i);
-    }
-    assert_eq!(vec.len(),10000);
-    for (i, value) in vec.into_iter().enumerate(){
-        assert_eq!(value,i);
-    }
-    println!("heal test passed");
-
-    panic!();
+    roar::roar();
+//    panic!();
     println!("Hello Quark!");
     unsafe {
         llvm_asm!("ebreak"::::"volatile");
     };
+    
     // make this uncommented if you want to see ticks
     // loop{}
 }

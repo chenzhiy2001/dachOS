@@ -26,15 +26,15 @@ RUN set -x; \
     && make -j$(nproc) install \
     && cd $HOME && rm -rf qemu-5.0.0 qemu-5.0.0.tar.xz
     
-#for chinese network
-# RUN set -x; \
-#     APT_CONF='/etc/apt/sources.list'; \
-#     CARGO_CONF='/root/.cargo/config'; \
-#     BASHRC='/root/.bashrc' \
-#     && echo 'export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static' >> $BASHRC \
-#     && echo 'export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup' >> $BASHRC \
-#     && touch $CARGO_CONF \
-#     && echo '[source.crates-io]' > $CARGO_CONF \
-#     && echo "replace-with = 'ustc'" >> $CARGO_CONF \
-#     && echo '[source.ustc]' >> $CARGO_CONF \
-#     && echo 'registry = "git://mirrors.ustc.edu.cn/crates.io-index"' >> $CARGO_CONF
+# for chinese network
+RUN set -x; \
+    APT_CONF='/etc/apt/sources.list'; \
+    CARGO_CONF='/root/.cargo/config'; \
+    BASHRC='/root/.bashrc' \
+    && echo 'export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static' >> $BASHRC \
+    && echo 'export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup' >> $BASHRC \
+    && touch $CARGO_CONF \
+    && echo '[source.crates-io]' > $CARGO_CONF \
+    && echo "replace-with = 'ustc'" >> $CARGO_CONF \
+    && echo '[source.ustc]' >> $CARGO_CONF \
+    && echo 'registry = "git://mirrors.ustc.edu.cn/crates.io-index"' >> $CARGO_CONF
